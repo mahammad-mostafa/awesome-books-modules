@@ -1,5 +1,4 @@
-import Book from './modules/book.js';
-import Books from './modules/books.js';
+import Books from './modules/list.js';
 
 const books = new Books();
 const pages = ['#list', '#add', '#contact'];
@@ -24,12 +23,12 @@ function displayContent(hash) {
   });
 }
 function displayBooks() {
-  if (books.bookList.length === 0) {
+  if (books.list.length === 0) {
     list.innerHTML = '<h2>No available books</h2>';
   } else {
     list.innerHTML = '';
     const fragment = new DocumentFragment();
-    books.bookList.forEach((book) => {
+    books.list.forEach((book) => {
       const item = document.createElement('li');
       let itemHTML = `<p>"${book.title}" by ${book.author}</p>`;
       itemHTML += `<button id="${book.id}">Remove</button>`;
@@ -47,13 +46,13 @@ function contentEvent(event) {
 }
 function addEvent(event) {
   event.preventDefault();
-  books.addBook({ id: `${Date.now()}`, title: form.title.value, author: form.author.value });
+  books.add(form.title.value, form.author.value);
   displayBooks();
   form.reset();
 }
 function removeEvent(event) {
   if (event.target.id !== '') {
-    books.removeBook(event.target.id);
+    books.remove(event.target.id);
     displayBooks();
   }
 }
