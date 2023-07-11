@@ -1,4 +1,4 @@
-import Time from './node_modules/luxon/src/datetime.js';
+import { DateTime } from './modules/luxon.min.js';
 import Display from './modules/display.js';
 import Books from './modules/list.js';
 
@@ -38,8 +38,8 @@ function removeEvent(event) {
   }
 }
 
-setInterval(() => { time.textContent = Time.now().toFormat('LLL dd y, hh:mm:ss a'); }, 1000);
-time.textContent = Time.now().toFormat('LLL dd y, hh:mm:ss a');
+setInterval(() => { time.textContent = DateTime.now().toFormat('LLL dd y, hh:mm:ss a'); }, 1000);
+time.textContent = DateTime.now().toFormat('LLL dd y, hh:mm:ss a');
 menu.addEventListener('click', contentEvent);
 list.addEventListener('click', removeEvent);
 form.addEventListener('submit', addEvent);
