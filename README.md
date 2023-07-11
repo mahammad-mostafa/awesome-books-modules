@@ -2,7 +2,7 @@
 
 <!-- TITLE -->
 
-# 🏷️ Personal Portfolio Site
+# 🏷️ Awesome Books Modules App
 
 This is the second project in the second module in the **Microverse** program.
 <br/>
@@ -82,12 +82,6 @@ You can easily download or fork this repository and work on it immadiately!
 - [GitHub](https://github.com/mahammad-mostafa)
 - [Twitter](https://twitter.com/mahammad_mostfa)
 - [LinkedIn](https://linkedin.com/in/mahammad-mostafa)
-
-📌 **Etsubdink:**
-- [GitHub](https://github.com/etsubdink-demeke12)
-
-📌 **Mark:**
-- [GitHub](https://github.com/as1imwe-mark)
 
 <p align="right"><a href="#title">back to top</a></p>
 
