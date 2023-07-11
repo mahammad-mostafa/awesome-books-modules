@@ -42,6 +42,7 @@ It also includes some config linters for (`HTML` / `CSS3` / `JavaScript`) in the
 - Single page app where all content is loaded dynamically
 - Responsive layout with all screen sizes
 - Three navigation links (list / add / contact)
+- Displays current date & time in realtime
 - Transition effect in content loading
 - Active content link is highlighted
 - Displays a list of books with title and author values
@@ -67,7 +68,7 @@ You can easily download or fork this repository and work on it immadiately!
 - Simply download or fork this repository.
 
 📌 **Deployment:**
-- You can deploy this project by uploading three files (`index.html` / `style.css` / `script.js`) to a live server.
+- You can deploy this project by uploading three files (`index.html` / `index.css` / `index.js`) with `modules` folder to a live server.
 
 <p align="right"><a href="#title">back to top</a></p>
 
