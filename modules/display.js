@@ -1,11 +1,11 @@
 export default class Display {
-  static setup(pages, links, contents) {
+  static setup = (pages, links, contents) => {
     this.pages = pages;
     this.links = links;
     this.contents = contents;
   }
 
-  static page(hash) {
+  static page = (hash) => {
     this.pages.forEach((page) => {
       const link = this.links[this.pages.indexOf(page)];
       const content = this.contents[this.pages.indexOf(page)];
@@ -21,7 +21,7 @@ export default class Display {
     });
   }
 
-  static list(array) {
+  static list = (array) => {
     const fragment = new DocumentFragment();
     array.forEach((book) => {
       const item = document.createElement('li');

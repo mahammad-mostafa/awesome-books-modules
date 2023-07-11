@@ -5,18 +5,18 @@ export default class List {
     this.list = JSON.parse(localStorage.getItem('List')) || [];
   }
 
-  add(title, author) {
+  add = (title, author) => {
     const book = new Book(title, author);
     this.list.push(book);
     this.store();
   }
 
-  remove(id) {
+  remove = (id) => {
     this.list = this.list.filter((book) => book.id !== id);
     this.store();
   }
 
-  store() {
+  store = () => {
     localStorage.setItem('List', JSON.stringify(this.list));
   }
 }
