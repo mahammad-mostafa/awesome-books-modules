@@ -11,32 +11,32 @@ const contents = document.querySelectorAll('.content');
 const list = document.querySelector('.content-list');
 const form = document.querySelector('.content-form');
 
-function displayBooks() {
+const displayBooks = () => {
   if (books.list.length === 0) {
     list.innerHTML = '<h2>No available books</h2>';
   } else {
     list.innerHTML = '';
     list.appendChild(Display.list(books.list));
   }
-}
-function contentEvent(event) {
+};
+const contentEvent = (event) => {
   event.preventDefault();
-  if (event.target.hash !== '') {
+  if (event.target.hash !== undefined) {
     Display.page(event.target.hash);
   }
-}
-function addEvent(event) {
+};
+const addEvent = (event) => {
   event.preventDefault();
   books.add(form.title.value, form.author.value);
   displayBooks();
   form.reset();
-}
-function removeEvent(event) {
+};
+const removeEvent = (event) => {
   if (event.target.id !== '') {
     books.remove(event.target.id);
     displayBooks();
   }
-}
+};
 
 setInterval(() => { time.textContent = DateTime.now().toFormat('LLL dd y, hh:mm:ss a'); }, 1000);
 time.textContent = DateTime.now().toFormat('LLL dd y, hh:mm:ss a');
