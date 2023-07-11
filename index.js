@@ -1,9 +1,11 @@
-import Books from './modules/list.js';
+import Time from './node_modules/luxon/src/datetime.js';
 import Display from './modules/display.js';
+import Books from './modules/list.js';
 
 const books = new Books();
 const pages = ['#list', '#add', '#contact'];
 const menu = document.querySelector('.header-menu');
+const time = document.querySelector('.header time');
 const links = document.querySelectorAll('.header-menu a');
 const contents = document.querySelectorAll('.content');
 const list = document.querySelector('.content-list');
@@ -35,6 +37,9 @@ function removeEvent(event) {
     displayBooks();
   }
 }
+
+setInterval(() => { time.textContent = Time.now().toFormat('LLL dd y, hh:mm:ss a'); }, 1000);
+time.textContent = Time.now().toFormat('LLL dd y, hh:mm:ss a');
 menu.addEventListener('click', contentEvent);
 list.addEventListener('click', removeEvent);
 form.addEventListener('submit', addEvent);
