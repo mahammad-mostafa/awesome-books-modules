@@ -31,7 +31,7 @@ This project is about building a single page web application for book management
 It also includes some config linters for (`HTML` / `CSS3` / `JavaScript`) in the `.github` folder. 
 
 📌 **Live Demo:**
-- See the project live from [here](https://mahammad-mostafa.github.io/awesome-books-modules-app).
+- See the project live from [here](https://mahammad-mostafa.github.io/awesome-books-modules).
 
 📌 **Tech Stack:**
 - Page strucutre is built with `HTML5`
